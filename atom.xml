@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.zeus2.top/"/>
-  <updated>2019-08-23T03:22:11.296Z</updated>
+  <updated>2019-08-24T03:07:48.312Z</updated>
   <id>http://www.zeus2.top/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>test post</title>
+    <link href="http://www.zeus2.top/2019/08/24/test-post/"/>
+    <id>http://www.zeus2.top/2019/08/24/test-post/</id>
+    <published>2019-08-24T03:07:13.000Z</published>
+    <updated>2019-08-24T03:07:48.312Z</updated>
+    
+    <content type="html"><![CDATA[<p>welcome</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;welcome&lt;/p&gt;
+
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>oracles使用OMF</title>
