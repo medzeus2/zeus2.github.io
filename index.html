@@ -231,7 +231,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://www.zeus2.top/2019/08/23/oracles使用OMF/">
+    <link itemprop="mainEntityOfPage" href="http://www.zeus2.top/2019/08/23/oracle使用OMF/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="zeus2">
@@ -250,7 +250,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2019/08/23/oracles使用OMF/" itemprop="url">oracles使用OMF</a></h1>
+                <a class="post-title-link" href="/2019/08/23/oracle使用OMF/" itemprop="url">oracle使用OMF</a></h1>
         
 
         <div class="post-meta">
@@ -281,8 +281,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2019/08/23/oracles使用OMF/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/08/23/oracles使用OMF/" itemprop="commentCount"></span>
+                <a href="/2019/08/23/oracle使用OMF/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/08/23/oracle使用OMF/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -312,8 +312,20 @@
       
         
           
-            <p>安装oracle后，使用命令可以使用OMF<br>ALTER SYSTEM SET DB_CREATE_FILE_DEST = ‘/u01/oradata’;</p>
-<p>Once DB_CREATE_FILE_DEST is set, the DATAFILE clause can be omitted from a CREATE TABLESPACE statement. The datafile is created in the location specified by DB_CREATE_FILE_DESTby default. For example:<br>SQL&gt; CREATE TABLESPACE tbs_2;</p>
+            <h1 id="什么是OMF"><a href="#什么是OMF" class="headerlink" title="什么是OMF"></a>什么是OMF</h1><p>Oracle managed file (OMF)  oracle管理文件，可以大幅降低管理员管理文件的负担及压力，文件由oracle数据库自行管理。</p>
+<h1 id="如何开启OMF"><a href="#如何开启OMF" class="headerlink" title="如何开启OMF"></a>如何开启OMF</h1><p>安装oracle后，设置DB_CREATE_FILE_DEST目录参数即可打开OMF。</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">ALTER</span> <span class="keyword">SYSTEM</span> <span class="keyword">SET</span> DB_CREATE_FILE_DEST = <span class="string">'/u01/oradata'</span>;</span><br></pre></td></tr></table></figure>
+
+<h1 id="OMF使用距离"><a href="#OMF使用距离" class="headerlink" title="OMF使用距离"></a>OMF使用距离</h1><ul>
+<li><p>创建一个表空间</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SQL&gt; CREATE TABLESPACE tbs_2;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>删除一个表空间</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SQL&gt; DROP TABLESPACE tbs_2;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>给表空间增加文件</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SQL&gt; ALTER TABLESPACE tbs_2 ADD DATAFILE;</span><br></pre></td></tr></table></figure></li>
+</ul>
 
           
         
@@ -403,6 +415,15 @@
 
             
 
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                
+                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-name">标签</span>
+                
+              </div>
             
 
           </nav>
