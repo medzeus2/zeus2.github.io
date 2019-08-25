@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.zeus2.top/"/>
-  <updated>2019-08-25T03:05:13.456Z</updated>
+  <updated>2019-08-25T03:13:44.287Z</updated>
   <id>http://www.zeus2.top/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://www.zeus2.top/2019/08/23/oracle%E4%BD%BF%E7%94%A8OMF/"/>
     <id>http://www.zeus2.top/2019/08/23/oracle使用OMF/</id>
     <published>2019-08-23T03:21:24.000Z</published>
-    <updated>2019-08-25T03:05:13.456Z</updated>
+    <updated>2019-08-25T03:13:44.287Z</updated>
     
     <content type="html"><![CDATA[<h1 id="什么是OMF"><a href="#什么是OMF" class="headerlink" title="什么是OMF"></a>什么是OMF</h1><p>Oracle managed file (OMF)  oracle管理文件，可以大幅降低管理员管理文件的负担及压力，文件由oracle数据库自行管理。</p><h1 id="如何开启OMF"><a href="#如何开启OMF" class="headerlink" title="如何开启OMF"></a>如何开启OMF</h1><p>安装oracle后，设置DB_CREATE_FILE_DEST目录参数即可打开OMF。</p><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">ALTER</span> <span class="keyword">SYSTEM</span> <span class="keyword">SET</span> DB_CREATE_FILE_DEST = <span class="string">'/u01/oradata'</span>;</span><br></pre></td></tr></table></figure><h1 id="OMF使用举例"><a href="#OMF使用举例" class="headerlink" title="OMF使用举例"></a>OMF使用举例</h1><ul><li><p>创建一个表空间</p><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SQL&gt; CREATE TABLESPACE tbs_2;</span><br></pre></td></tr></table></figure></li><li><p>删除一个表空间</p><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SQL&gt; DROP TABLESPACE tbs_2;</span><br></pre></td></tr></table></figure></li><li><p>给表空间增加文件</p><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SQL&gt; ALTER TABLESPACE tbs_2 ADD DATAFILE;</span><br></pre></td></tr></table></figure></li></ul>]]></content>
     
@@ -34,8 +34,12 @@
     
     </summary>
     
+      <category term="oracle" scheme="http://www.zeus2.top/categories/oracle/"/>
     
-      <category term="oracle, omf" scheme="http://www.zeus2.top/tags/oracle-omf/"/>
+    
+      <category term="oracle" scheme="http://www.zeus2.top/tags/oracle/"/>
+    
+      <category term="omf" scheme="http://www.zeus2.top/tags/omf/"/>
     
   </entry>
   
