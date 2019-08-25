@@ -4,6 +4,56 @@
   
     
     <entry>
+      <title>如何配置免费的HTTPS证书</title>
+      <link href="/2019/08/25/how-to-use-https-for-free/"/>
+      <url>/2019/08/25/how-to-use-https-for-free/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      <categories>
+          
+          <category> web </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> https </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>spring boot 密码加密</title>
+      <link href="/2019/08/25/spring-boot-password-encrypt/"/>
+      <url>/2019/08/25/spring-boot-password-encrypt/</url>
+      
+        <content type="html"><![CDATA[<h1 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h1><p>通常部署时有场景需求，将配置文件中的密码进行加密，避免明文查看密码。目前springboot默认将数据库密码及redis密码等进行明文存储。</p><h1 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h1><p>Spring boot 使用第三方库jasypt可以实现该功能。</p><h1 id="添加依赖"><a href="#添加依赖" class="headerlink" title="添加依赖"></a>添加依赖</h1><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.github.ulisesbocchio<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>jasypt-spring-boot-starter<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">version</span>&gt;</span>1.14<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure><h1 id="获取加密密码"><a href="#获取加密密码" class="headerlink" title="获取加密密码"></a>获取加密密码</h1><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">java -cp jasypt-1.9.2.jar  org.jasypt.intf.cli.JasyptPBEStringEncryptionCLI input="12112112" password=jspc1234 algorithm=PBEWithMD5AndDES</span><br></pre></td></tr></table></figure><p>password是加密密钥<br>input 是待加密的密码<br>密码就是ENC(返回的数据）</p><h1 id="修改启动参数"><a href="#修改启动参数" class="headerlink" title="修改启动参数"></a>修改启动参数</h1><p>启动命令中增加</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-Djasypt.encryptor.password=加密密钥</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> java </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> spring </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>oracle使用OMF</title>
       <link href="/2019/08/23/oracle%E4%BD%BF%E7%94%A8OMF/"/>
       <url>/2019/08/23/oracle%E4%BD%BF%E7%94%A8OMF/</url>
