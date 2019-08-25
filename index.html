@@ -384,7 +384,14 @@
       
         
           
-            
+            <h1 id="certbot"><a href="#certbot" class="headerlink" title="certbot"></a>certbot</h1><p>certbot的前身是Let’s Encrypt，工具后改名为cerbot，用于生成https证书加密网站。<br>如果你拥有一个域名指向的主机，可以通过certbot配置https。</p>
+<h1 id="配置主机"><a href="#配置主机" class="headerlink" title="配置主机"></a>配置主机</h1><p>需要打开80与443防火墙，服务器安装个nginx方便自动配置</p>
+<h1 id="下载源码"><a href="#下载源码" class="headerlink" title="下载源码"></a>下载源码</h1><p>直接从github上下载certbot工具</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/certbot/certbot.git</span><br></pre></td></tr></table></figure>
+
+<h1 id="生成证书"><a href="#生成证书" class="headerlink" title="生成证书"></a>生成证书</h1><p>使用命令 ./certbot-auto -d youdomain<br>根据提示选择，之后自动在你nginx增加了https配置，建议将http强制跳转到https。</p>
+<p>后面就可以愉快地玩耍了。</p>
+
           
         
       
